@@ -88,15 +88,18 @@ document.getElementById('swag').onclick = function() {
     const amounti = images.amount[stuff.amount];
     amounti.width = amounti.height = 64;
     o.appendChild(amounti);
+    document.getElementById('attempts').innerHTML = '';
+  } else {
+    let attempts = 1;
+    if(stuff.size === 1)
+      attempts = 2;
+    if(stuff.speed === 1)
+      attempts++;
+    document.getElementById('attempts').innerHTML = `${attempts} attempt${attempts > 1 ? 's' : ''}`;
   }
 
-  let attempts = 1;
-  if(stuff.size === 1)
-    attempts = 2;
-  if(stuff.speed === 1)
-    attempts++;
   
-  document.getElementById('attempts').innerHTML = `${attempts} attempt${attempts > 1 ? 's' : ''}`;
+  
 };
 
 
