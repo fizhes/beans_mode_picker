@@ -12,6 +12,7 @@ const images = {
     new Image(),
     new Image(),
     new Image(),
+    new Image(),
   ],
   count: [
     new Image(),
@@ -49,6 +50,7 @@ images.mode[8].src  = 'https://www.google.com/logos/fnbx/snake_arcade/v13/trophy
 images.mode[9].src  = 'https://www.google.com/logos/fnbx/snake_arcade/v13/trophy_09.png';
 images.mode[10].src = 'https://www.google.com/logos/fnbx/snake_arcade/v13/trophy_10.png';
 images.mode[11].src = 'https://www.google.com/logos/fnbx/snake_arcade/v13/trophy_11.png';
+images.mode[11].src = 'https://www.google.com/logos/fnbx/snake_arcade/v13/trophy_12.png';
 
 images.count[0].src = 'https://www.google.com/logos/fnbx/snake_arcade/v3/count_00.png';
 images.count[1].src = 'https://www.google.com/logos/fnbx/snake_arcade/v3/count_01.png';
