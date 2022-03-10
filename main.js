@@ -106,7 +106,7 @@ document.getElementById('swag').onclick = function() {
 
 
 function acidreflux() {
-  let mode   = ~~(Math.random() * 12);
+  let mode   = ~~(Math.random() * 13);
   let count  = ~~(Math.random() * 3);
   let speed  = ~~(Math.random() * 2);
   let size   = ~~(Math.random() * 2);
