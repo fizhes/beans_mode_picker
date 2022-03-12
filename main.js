@@ -192,12 +192,15 @@ function acidreflux() {
   if(!(mode === 1 || mode === 2 || mode === 8 || mode === 9 || mode === 10)) {
     if(size === 0) {
       amount = ~~(Math.random() * 4);
+    } else if((mode === 7 || mode === 3) && size === 1) {
+      amount = ~~(Math.random() * 2);
+      if(amount === 1)
+        amount = 3;
     } else {
       amount = ~~(Math.random() * 3);
       if(amount === 2)
         amount = 3;
     }
-    if((mode === 7 || mode === 3) && size === 1 && amount === 1) amount = 3;
   }
 
   return {
