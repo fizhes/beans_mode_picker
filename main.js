@@ -161,7 +161,6 @@ document.getElementById('swag').onclick = function() {
       wr < 60 ? '4 minutes' :
       wr < 90 ? '5 minutes' :
       wr < 150 ? '7 minutes' :
-
       '10 minutes'
     );
   } else {
@@ -175,6 +174,23 @@ document.getElementById('swag').onclick = function() {
 
   
   
+};
+
+document.getElementById('copy').onclick = function() {
+  const a = document.getElementById('output').children;
+  if(a.length === 0)return;
+
+  const mode = map.mode[~~a[0].src.match(/trophy_\d\d/)[0].match(/\d\d/)[0]].toLowerCase().replace(/ /g, '');
+  const count = a[1].src.match(/count_\d\d/)[0];
+  const speed = a[2].src.match(/speed_\d\d/)[0];
+  const size = a[3].src.match(/size_\d\d/)[0];
+  let amount = '';
+  if(a.length === 5) amount = a[4].src.match(/[a-zA-Z0-9]{2,3}\.png/)[0].replace('.png', '');
+  const attempts = document.getElementById('attempts').innerHTML;
+  
+
+  navigator.clipboard.writeText(`:${mode === 'key' ? 'key~1' : mode}: :${count}: :${speed}: :${size}: ${amount}${attempts.includes('attempt') ? '' : '\n' + attempts}`);
+
 };
 
 
